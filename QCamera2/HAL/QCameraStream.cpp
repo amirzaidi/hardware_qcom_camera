@@ -956,7 +956,7 @@ int32_t QCameraStream::processZoomDone(preview_stream_ops_t *previewWindow,
 
     // get stream param for crop info
     for (int i = 0; i < crop_info.num_of_streams; i++) {
-        if (crop_info.crop_info[i].stream_id == mStreamInfo->stream_svr_id) {
+        if (crop_info.crop_info[i].stream_id == (uint32_t)(uint16_t)mStreamInfo->stream_svr_id) {
             pthread_mutex_lock(&mCropLock);
             mCropInfo = crop_info.crop_info[i].crop;
             pthread_mutex_unlock(&mCropLock);
@@ -2426,7 +2426,7 @@ int32_t QCameraStream::getFormat(cam_format_t &fmt)
  *==========================================================================*/
 uint32_t QCameraStream::getMyServerID() {
     if (mStreamInfo != NULL) {
-        return mStreamInfo->stream_svr_id;
+        return (uint32_t)(uint16_t)mStreamInfo->stream_svr_id;
     } else {
         return 0;
     }
