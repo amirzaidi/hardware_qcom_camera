@@ -1714,8 +1714,8 @@ typedef struct {
 } cam_hw_data_overwrite_t;
 
 typedef struct {
-    uint32_t streamID;
-    uint32_t buf_index;
+    uint16_t streamID;
+    uint16_t buf_index;
 } cam_stream_request_t;
 
 typedef struct {
