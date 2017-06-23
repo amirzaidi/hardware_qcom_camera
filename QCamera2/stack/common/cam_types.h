@@ -1715,7 +1715,7 @@ typedef struct {
 
 typedef struct {
     uint32_t streamID;
-//  uint32_t buf_index;
+    uint32_t buf_index;
 } cam_stream_request_t;
 
 typedef struct {
