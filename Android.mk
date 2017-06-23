@@ -19,7 +19,7 @@ MM_V4L2_DRIVER_LIST += msmcobalt
 MM_V4L2_DRIVER_LIST += msmfalcon
 
 
-#CAMERA_BUILD_HAL := true
+CAMERA_BUILD_HAL := true
 ifdef CAMERA_BUILD_HAL
 
 ifneq (,$(filter $(MM_V4L2_DRIVER_LIST),$(TARGET_BOARD_PLATFORM)))
